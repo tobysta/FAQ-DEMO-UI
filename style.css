@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    list-style: none;           /* remove default triangle in some browsers */
+    cursor: pointer;
+    padding: 16px 10px;
+    font-weight: 600;
+    color: #222;
+    position: relative;
+    padding-right: 40px;
+}
+
+/* Custom +/- icon */
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555;
+}
+
+details[open] .faq-question::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 0 10px 16px 10px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Optional: smoother open/close on some browsers */
+details > summary {
+    outline: none;
+}

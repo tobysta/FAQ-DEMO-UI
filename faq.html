@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ UI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <details class="faq-item">
+            <summary class="faq-question">What is Flask?</summary>
+            <div class="faq-answer">
+                Flask is a lightweight Python web framework that helps you build web applications quickly.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Do I need JavaScript for an FAQ page?</summary>
+            <div class="faq-answer">
+                No. You can use the HTML &lt;details&gt; and &lt;summary&gt; tags to make collapsible FAQs without JavaScript.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">How do I add more questions?</summary>
+            <div class="faq-answer">
+                Add more &lt;details&gt; blocks in the HTML or extend the faqs list in app.py and loop over it in the template.
+            </div>
+        </details>
+    </div>
+</body>
+</html>
